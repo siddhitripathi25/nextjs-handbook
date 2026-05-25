@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        I am parent of page.js{children}</body>
+        {children}</body>
     </html>
   );
 }
