@@ -1,9 +1,16 @@
+'use client'   ///IF WE ARE USING ANY HOOK IN NEXT.JS THEN WE NEED TO USE THIS 'USE CLIENT' AT THE TOP OF THE FILE.
+//  THIS IS BECAUSE NEXT.JS BY DEFAULT RENDER THE COMPONENTS ON THE SERVER SIDE AND IF WE ARE USING ANY HOOK THEN IT WILL THROW AN ERROR BECAUSE HOOKS CAN ONLY BE USED IN CLIENT SIDE RENDERING.
+//  SO TO AVOID THIS ERROR WE NEED TO USE THIS 'USE CLIENT' AT THE TOP OF THE FILE.
 import React from 'react'
+import { useParams } from 'next/navigation'
 
 const page = () => {
+    const params = useParams()
+    console.log(params)
+
   return (
     <div>
-      <h1>XYZ Course</h1>
+      <h1>{params.id} Course</h1>   
     </div>
   )
 }
