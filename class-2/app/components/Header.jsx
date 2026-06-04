@@ -1,159 +1,161 @@
-import React from 'react'
+import React from "react";
 
 const Header = () => {
   return (
     <div>
-      <>
-  {/* Breadcrumb */}
-  <nav className="flex-warp md:flex justify-between" aria-label="Breadcrumb">
-    <ol className="inline-flex items-center mb-3 space-x-2.5 md:space-x-2 rtl:space-x-reverse sm:mb-0">
-      <li>
-        <div className="flex items-center">
+      <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="#"
-            className="text-sm font-medium text-body hover:text-fg-brand"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            flowbite.com
-          </a>
-        </div>
-      </li>
-      <li aria-current="page">
-        <div className="flex items-center space-x-2.5">
-          <svg
-            className="w-3.5 h-3.5 rtl:rotate-180 text-body"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width={24}
-            height={24}
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="m9 5 7 7-7 7"
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="h-7"
+              alt="Flowbite Logo"
             />
-          </svg>
-          <a
-            href="#"
-            className="text-sm font-medium text-body hover:text-fg-brand"
-          >
-            develop
+            <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
+              Flowbite
+            </span>
           </a>
-        </div>
-      </li>
-      <li aria-current="page">
-        <div className="flex items-center space-x-2.5">
-          <svg
-            className="w-3.5 h-3.5 rtl:rotate-180 text-body"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width={24}
-            height={24}
-            fill="none"
-            viewBox="0 0 24 24"
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="m9 5 7 7-7 7"
-            />
-          </svg>
-          <span className="text-sm font-medium text-body-subtle">
-            Issue #312
-          </span>
-          <span className="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-sm me-2.5">
-            docs
-          </span>
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width={24}
+              height={24}
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeWidth={2}
+                d="M5 7h14M5 12h14M5 17h14"
+              />
+            </svg>
+          </button>
+          <div
+            className="hidden w-full md:block md:w-auto"
+            id="navbar-dropdown"
+          >
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <button
+                  id="dropdownNvbarButton"
+                  data-dropdown-toggle="dropdownNavbar"
+                  className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+                >
+                  Dropdown
+                  <svg
+                    className="w-4 h-4 ms-1.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={24}
+                    height={24}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="m19 9-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {/* Dropdown menu */}
+                <div
+                  id="dropdownNavbar"
+                  className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44"
+                >
+                  <ul
+                    className="p-2 text-sm text-body font-medium"
+                    aria-labelledby="dropdownNvbarButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        Earnings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        Sign out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </li>
-    </ol>
-    <div>
-      <button
-        id="dropdownDefault"
-        data-dropdown-toggle="dropdown"
-        type="button"
-        className="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none"
-      >
-        <svg
-          className="w-3.5 h-3.5 me-1.5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width={24}
-          height={24}
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0a4 4 0 0 1-4 4h-1a3 3 0 0 0-3 3"
-          />
-        </svg>
-        Fix #6597
-        <svg
-          className="w-3.5 h-3.5 ms-1.5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width={24}
-          height={24}
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="m19 9-7 7-7-7"
-          />
-        </svg>
-      </button>
-      <div
-        id="dropdown"
-        className="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32 block hidden"
-      >
-        <ul
-          className="p-2 text-sm text-body font-medium"
-          aria-labelledby="dropdownDefault"
-        >
-          <li>
-            <a
-              href="#"
-              className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md"
-            >
-              New branch
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md"
-            >
-              Rename
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md"
-            >
-              Delete
-            </a>
-          </li>
-        </ul>
-      </div>
+      </nav>
     </div>
-  </nav>
-</>
-    </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
