@@ -152,6 +152,9 @@ const Header = () => {
                   About Us
                 </a>
               </li> */}
+                <Link href="/product-server" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">
+                  Product Server
+              </Link>
               <Link href="/AboutUs" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">
                   About Us
               </Link>
